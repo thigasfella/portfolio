@@ -28,7 +28,7 @@ export default function Home() {
         <section>
           <div className="container-photo" id="#home"  data-aos="fade-down" data-aos-duration="1000">
             <div className="card" style={{ width: '13rem',}}>
-              <Image src="/img/my-photo.jpg" className="card-img-top" alt="Minha foto" width={300} height={320}/>
+            <img src="/img/my-photo.jpg" className="card-img-top" alt="Minha foto" width={300} height={320}/>
               <div className="card-body">
                 <p className="card-text">
                 <a href="http://github.com/thigasfella" target="_blank" rel="noopener noreferrer">
