@@ -2,6 +2,7 @@ import Head from "next/head";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Image from "next/image"; // Importe o componente Image do next/image
 
 
 export default function Home() {
@@ -27,7 +28,7 @@ export default function Home() {
         <section>
           <div className="container-photo" id="#home"  data-aos="fade-down" data-aos-duration="1000">
             <div className="card" style={{ width: '13rem',}}>
-              <img src="/img/my-photo.jpg" className="card-img-top" alt="Minha foto" />
+              <Image src="/img/my-photo.jpg" className="card-img-top" alt="Minha foto" />
               <div className="card-body">
                 <p className="card-text">
                 <a href="http://github.com/thigasfella" target="_blank" rel="noopener noreferrer">
