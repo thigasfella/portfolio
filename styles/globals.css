@@ -127,7 +127,8 @@ i{
 }
 
 .photos-container{
-    width: 65vw;
+    width: 100%;
+    right: 17%;
     text-align: center;
     font-style: normal;
     text-orientation: mixed; /* Orientação mista para garantir que o texto fique na posição correta */
@@ -136,32 +137,29 @@ i{
     top: 50vh; /* Alinha no topo */
 }
 .photos img{
-    width: 5vw;
-    height: 10vh;
+    width: 5%;
+    height: 7vh;
     margin: 0 auto;
     padding: 10px;
 }
 
-
-/* Estilos para dispositivos móveis (telefones) */
-@media (max-width: 480px) {
-    /* Estilos para telas pequenas */
+@media (max-width: 350px){
     .small-icon{
         font-size: 250%;
     }
     .container-photo {
         display: block;
         margin: 0 auto; /* Centraliza horizontalmente */
-        margin-top: 30vh; /* Ajuste conforme necessário */
-        width: 40%; /* Largura relativa para não ocupar toda a largura */
+        margin-top: 25vh; /* Ajuste conforme necessário */
+        width: 70%; /* Largura relativa para não ocupar toda a largura */
         max-width: 100%; /* Garante que não ultrapasse a largura da tela */
     }
 
     .card-img-top {
         border-bottom-left-radius: 5vw;
         border-bottom-right-radius: 5vw;
-        height: 65vh; /* Altura desejada */
-        max-height: 65vh; /* Altura máxima desejada */
+        height: 10vh; /* Altura desejada */
+        max-height: 40vh; /* Altura máxima desejada */
        
         object-fit: cover; /* Ajusta a imagem ao tamanho do container */
     }
@@ -170,7 +168,7 @@ i{
         position: absolute;
         font-family: var(--font-family);
         font-weight: 1000;
-        font-size: 0.7rem;
+        font-size: 0.5rem;
         font-style: normal;
         text-align: center; /* Centraliza o texto */
         top: 12vh; /* Posição relativa ao topo */
@@ -182,7 +180,55 @@ i{
     }
 
     .text-normal-apresentacao {
-        font-size: 1.5rem;
+        font-size: 0.9rem;
+    }
+    .photos-container{
+        display: none;
+    }
+    .card-img-top{
+        height: 63vh;
+    }
+}
+/* Estilos para dispositivos móveis (telefones) */
+@media (min-width: 351px) and (max-width: 480px) {
+    /* Estilos para telas pequenas */
+    .small-icon{
+        font-size: 250%;
+    }
+    .container-photo {
+        display: block;
+        margin: 0 auto; /* Centraliza horizontalmente */
+        margin-top: 25vh; /* Ajuste conforme necessário */
+        width: 70%; /* Largura relativa para não ocupar toda a largura */
+        max-width: 100%; /* Garante que não ultrapasse a largura da tela */
+    }
+
+    .card-img-top {
+        border-bottom-left-radius: 5vw;
+        border-bottom-right-radius: 5vw;
+        height: 10vh; /* Altura desejada */
+        max-height: 42vh; /* Altura máxima desejada */
+       
+        object-fit: cover; /* Ajusta a imagem ao tamanho do container */
+    }
+
+    .containerText {
+        position: absolute;
+        font-family: var(--font-family);
+        font-weight: 1000;
+        font-size: 0.6rem;
+        font-style: normal;
+        text-align: center; /* Centraliza o texto */
+        top: 12vh; /* Posição relativa ao topo */
+        left: 50%; /* Centraliza horizontalmente */
+        transform: translateX(-50%); /* Ajusta para centralizar corretamente */
+        color: var(--color-text); /* Cor do texto */
+        width: 80%; /* Largura relativa para não ocupar toda a largura */
+        max-width: 600px; /* Largura máxima fixa */
+    }
+
+    .text-normal-apresentacao {
+        font-size: 1rem;
     }
     .photos-container{
         display: none;
@@ -209,8 +255,8 @@ i{
     .card-img-top {
         border-bottom-left-radius: 5vw;
         border-bottom-right-radius: 5vw;
-        height: 65vh; /* Altura desejada */
-        max-height: 65vh; /* Altura máxima desejada */
+        height: 45vh; /* Altura desejada */
+        max-height: 45vh; /* Altura máxima desejada */
        
         object-fit: cover; /* Ajusta a imagem ao tamanho do container */
     }
@@ -247,6 +293,37 @@ i{
     .small-icon{
         font-size: 300%;
     }
+    .containerText {
+        position: absolute;
+        font-family: var(--font-family);
+        font-weight: 1000;
+        font-size: 0.9rem;
+        font-style: normal;
+
+        top: 30vh; /* Posição relativa ao topo */
+        left: 45%; /* Centraliza horizontalmente */
+        transform: translateX(-50%); /* Ajusta para centralizar corretamente */
+        color: var(--color-text); /* Cor do texto */
+        width: 80%; /* Largura relativa para não ocupar toda a largura */
+        max-width: 600px; /* Largura máxima fixa */
+    }
+    
+.photos-container{
+    width: 96%;
+    right: 17%;
+    text-align: center;
+    font-style: normal;
+    text-orientation: mixed; /* Orientação mista para garantir que o texto fique na posição correta */
+    white-space: nowrap; /* Evita que o texto quebre em várias linhas */
+    position: absolute; /* Posição absoluta para sobrepor */
+    top: 50vh; /* Alinha no topo */
+}
+    .photos img{
+        width: 2.7rem;
+        height: 6.5vh;
+        margin: 0 auto;
+        padding: 1%;
+    }
     .container-photo{
         display: inline-block;
         margin-left: 65%;
@@ -266,6 +343,22 @@ i{
     .card-img-top{
         height: 65vh;
     }
+    .photos-container{
+        width: 60rem;
+        right: 18%;
+        text-align: center;
+        font-style: normal;
+        text-orientation: mixed; /* Orientação mista para garantir que o texto fique na posição correta */
+        white-space: nowrap; /* Evita que o texto quebre em várias linhas */
+        position: absolute; /* Posição absoluta para sobrepor */
+        top: 50vh; /* Alinha no topo */
+    }
+        .photos img{
+            width: 3.3rem;
+            height: 8vh;
+            margin: 0 auto;
+            padding: 1%;
+        }
   }
   
   /* Estilos para desktops médios */
