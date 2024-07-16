@@ -2,6 +2,9 @@
 :root {
     --color-link: #fff;
     --color-underline-link: #ff4400;
+    --destaque-cor: #CF0A0A;
+    --background-page: #ffa500; 
+    --color-text: #333;
     --font-family: "Raleway", sans-serif;
 }
 
@@ -9,12 +12,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
+    scroll-behavior: smooth;
+  }
 body{
-    background-color: orange;
+    background-color: var(--background-page);
+    max-width: 100%;
 }
 
 header {
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -42,6 +48,7 @@ header::before {
 }
 
 a {
+    position:sticky;
     font-family: var(--font-family);
     position: relative; /* Necessário para o posicionamento absoluto do pseudo-elemento */
     display: inline-block;
@@ -65,48 +72,157 @@ a::before {
 a:hover::before {
     width: 100%;
 }
+
 .container-photo{
-    display: flex;
-    align-items: center;
-    margin-top: 13vh;
-    margin-left: 1vw;
-    size: 20px;
+    display: inline-block;
+    margin-left: 70%;
+    margin-top: 12vh;
+    
 }
 .card{
     background-color: #000000c9;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.771);
     overflow: hidden;
+    width: 20vw !important;
 }
 .card-img-top{
     border-bottom-left-radius: 70px;
     border-bottom-right-radius: 70px;
+    height: 65vh;
+}
+.card-text{
+    height: 15%;
+    
 }
 .card-body{
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.vertical-text-container {
+.vertical-text-container{
+    display: none;
+}
+.text-normal-container{
     font-family: var(--font-family);
     font-optical-sizing: auto;
     font-weight: 1000;
     font-style: normal;
-    writing-mode: vertical-lr; /* Define a rotação do texto para vertical da esquerda para a direita */
     text-orientation: mixed; /* Orientação mista para garantir que o texto fique na posição correta */
-    transform: rotate(360deg); /* Rotaciona o texto */
     white-space: nowrap; /* Evita que o texto quebre em várias linhas */
     position: absolute; /* Posição absoluta para sobrepor */
     top: 25vh; /* Alinha no topo */
-    left: 15.9em;
-    color: #333; /* Cor do texto */
-  }
-
-  .vertical-text{
-    font-size: 20px;
-
+    left: 7.2rem;
+    color: var(--color-text); /* Cor do texto */
+}
+.text-normal-apresentacao{
+    font-size: 2rem;
+}
+.destaque-text{
+    color: var(--destaque-cor);
+}
+p{
+    margin: 0;
+}
+i{
+    font-size: 3rem;
+    margin: 0 auto;
 }
 
-i{
-    font-size: 3em;
+.photos-container{
+    width: 65vw;
+    text-align: center;
+    font-style: normal;
+    text-orientation: mixed; /* Orientação mista para garantir que o texto fique na posição correta */
+    white-space: nowrap; /* Evita que o texto quebre em várias linhas */
+    position: absolute; /* Posição absoluta para sobrepor */
+    top: 50vh; /* Alinha no topo */
+}
+.photos img{
+    width: 5vw;
+    height: 10vh;
     margin: 0 auto;
+    padding: 10px;
+}
+
+@media (max-width: 305px){
+    .vertical-text-container{
+        display:inline;
+    }
+    .text-normal-container{
+        display: none;    
+    }
+    .container-photo{
+        display: flex;
+        align-items: center;
+        flex-direction:row;
+        margin-top: 12vh;
+        margin-left: 1vw;
+        size: 20px;
+    }
+    .card{
+        background-color: #000000c9;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.771);
+        overflow: hidden;
+        width: 13rem !important;
+    }
+    .card-img-top{
+        border-bottom-left-radius: 70px;
+        border-bottom-right-radius: 70px;
+        height: 20rem !important;
+    }
+    .card-body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .vertical-text-container {
+        font-family: var(--font-family);
+        font-optical-sizing: auto;
+        font-weight: 1000;
+        font-style: normal;
+        writing-mode: vertical-lr; /* Define a rotação do texto para vertical da esquerda para a direita */
+        text-orientation: mixed; /* Orientação mista para garantir que o texto fique na posição correta */
+        transform: rotate(360deg); /* Rotaciona o texto */
+        white-space: nowrap; /* Evita que o texto quebre em várias linhas */
+        position: absolute; /* Posição absoluta para sobrepor */
+        top: 25vh; /* Alinha no topo */
+        left: 15.9em;
+        color: #333; /* Cor do texto */
+      }
+    
+      .vertical-text{
+        font-size: 20px;
+    
+    }
+    .vertical-text-secondary{
+        font-family: var(--font-family);
+        font-optical-sizing: auto;
+        font-weight: 1000;
+        font-style: normal;
+        writing-mode: vertical-lr; /* Define a rotação do texto para vertical da esquerda para a direita */
+        text-orientation: mixed; /* Orientação mista para garantir que o texto fique na posição correta */
+        transform: rotate(360deg); /* Rotaciona o texto */
+        white-space: nowrap; /* Evita que o texto quebre em várias linhas */
+        position: absolute; /* Posição absoluta para sobrepor */
+        top: 14.5vh; /* Alinha no topo */
+        right: 2rem;
+        color: #333; /* Cor do texto */
+        font-size: 20px;
+    }
+    
+    i{
+        font-size: 3rem;
+        margin: 0 auto;
+    }
+}
+@media (max-width: 285px){
+    .card{
+        width: 13rem !important ;
+    }
+    .card-img-top{
+        height: 20rem !important;
+    }
+    a{
+        font-size: 0.6em;
+    }
 }
