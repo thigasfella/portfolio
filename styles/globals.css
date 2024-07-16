@@ -83,11 +83,11 @@ a:hover::before {
     background-color: #000000c9;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.771);
     overflow: hidden;
-    width: 20vw !important;
+    width: 100% !important;
 }
 .card-img-top{
-    border-bottom-left-radius: 70px;
-    border-bottom-right-radius: 70px;
+    border-bottom-left-radius: 5vw;
+    border-bottom-right-radius: 5vw;
     height: 65vh;
 }
 .card-text{
@@ -99,17 +99,15 @@ a:hover::before {
     align-items: center;
     justify-content: center;
 }
-.vertical-text-container{
-    display: none;
-}
-.text-normal-container{
+
+.containerText{
+    position: absolute;
     font-family: var(--font-family);
     font-optical-sizing: auto;
     font-weight: 1000;
     font-style: normal;
     text-orientation: mixed; /* Orientação mista para garantir que o texto fique na posição correta */
     white-space: nowrap; /* Evita que o texto quebre em várias linhas */
-    position: absolute; /* Posição absoluta para sobrepor */
     top: 25vh; /* Alinha no topo */
     left: 7.2rem;
     color: var(--color-text); /* Cor do texto */
@@ -144,85 +142,102 @@ i{
     padding: 10px;
 }
 
-@media (max-width: 305px){
-    .vertical-text-container{
-        display:inline;
+
+/* Estilos para dispositivos móveis (telefones) */
+@media (max-width: 480px) {
+    /* Estilos para telas pequenas */
+  }
+  
+  /* Estilos para dispositivos móveis (telefones grandes e tablets pequenos) */
+  @media (min-width: 481px) and (max-width: 767px) {
+    /* Estilos para telas médias */
+    .small-icon{
+        font-size: 250%;
     }
-    .text-normal-container{
-        display: none;    
+    .container-photo {
+        display: block;
+        margin: 0 auto; /* Centraliza horizontalmente */
+        margin-top: 30vh; /* Ajuste conforme necessário */
+        width: 40%; /* Largura relativa para não ocupar toda a largura */
+        max-width: 100%; /* Garante que não ultrapasse a largura da tela */
+    }
+
+    .card-img-top {
+        border-bottom-left-radius: 5vw;
+        border-bottom-right-radius: 5vw;
+        height: 65vh; /* Altura desejada */
+        max-height: 65vh; /* Altura máxima desejada */
+       
+        object-fit: cover; /* Ajusta a imagem ao tamanho do container */
+    }
+
+    .containerText {
+        position: absolute;
+        font-family: var(--font-family);
+        font-weight: 1000;
+        font-size: 0.7rem;
+        font-style: normal;
+        text-align: center; /* Centraliza o texto */
+        top: 12vh; /* Posição relativa ao topo */
+        left: 50%; /* Centraliza horizontalmente */
+        transform: translateX(-50%); /* Ajusta para centralizar corretamente */
+        color: var(--color-text); /* Cor do texto */
+        width: 80%; /* Largura relativa para não ocupar toda a largura */
+        max-width: 600px; /* Largura máxima fixa */
+    }
+
+    .text-normal-apresentacao {
+        font-size: 1.5rem;
+    }
+    .photos-container{
+        display: none;
+    }
+    .card-img-top{
+        height: 63vh;
+    }
+  }
+  
+  /* Estilos para tablets */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    /* Estilos para tablets */
+    .small-icon{
+        font-size: 300%;
     }
     .container-photo{
-        display: flex;
-        align-items: center;
-        flex-direction:row;
+        display: inline-block;
+        margin-left: 65%;
         margin-top: 12vh;
-        margin-left: 1vw;
-        size: 20px;
-    }
-    .card{
-        background-color: #000000c9;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.771);
-        overflow: hidden;
-        width: 13rem !important;
     }
     .card-img-top{
-        border-bottom-left-radius: 70px;
-        border-bottom-right-radius: 70px;
-        height: 20rem !important;
+        height: 65vh;
     }
-    .card-body{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .vertical-text-container {
-        font-family: var(--font-family);
-        font-optical-sizing: auto;
-        font-weight: 1000;
-        font-style: normal;
-        writing-mode: vertical-lr; /* Define a rotação do texto para vertical da esquerda para a direita */
-        text-orientation: mixed; /* Orientação mista para garantir que o texto fique na posição correta */
-        transform: rotate(360deg); /* Rotaciona o texto */
-        white-space: nowrap; /* Evita que o texto quebre em várias linhas */
-        position: absolute; /* Posição absoluta para sobrepor */
-        top: 25vh; /* Alinha no topo */
-        left: 15.9em;
-        color: #333; /* Cor do texto */
-      }
-    
-      .vertical-text{
-        font-size: 20px;
-    
-    }
-    .vertical-text-secondary{
-        font-family: var(--font-family);
-        font-optical-sizing: auto;
-        font-weight: 1000;
-        font-style: normal;
-        writing-mode: vertical-lr; /* Define a rotação do texto para vertical da esquerda para a direita */
-        text-orientation: mixed; /* Orientação mista para garantir que o texto fique na posição correta */
-        transform: rotate(360deg); /* Rotaciona o texto */
-        white-space: nowrap; /* Evita que o texto quebre em várias linhas */
-        position: absolute; /* Posição absoluta para sobrepor */
-        top: 14.5vh; /* Alinha no topo */
-        right: 2rem;
-        color: #333; /* Cor do texto */
-        font-size: 20px;
-    }
-    
-    i{
-        font-size: 3rem;
-        margin: 0 auto;
-    }
-}
-@media (max-width: 285px){
-    .card{
-        width: 13rem !important ;
+  }
+  
+  /* Estilos para desktops pequenos */
+  @media (min-width: 1025px) and (max-width: 1280px) {
+    /* Estilos para desktops pequenos */
+    .small-icon{
+        font-size: 300%;
     }
     .card-img-top{
-        height: 20rem !important;
+        height: 65vh;
     }
-    a{
-        font-size: 0.6em;
+  }
+  
+  /* Estilos para desktops médios */
+  @media (min-width: 1281px) and (max-width: 1440px) {
+    /* Estilos para desktops médios */
+    .small-icon{
+        font-size: 300%;
     }
-}
+    .card-img-top{
+        height: 65vh;
+    }
+
+  }
+  
+  /* Estilos para desktops grandes */
+  @media (min-width: 1441px) {
+    /* Estilos para desktops grandes */
+  }
+  
