@@ -146,6 +146,50 @@ i{
 /* Estilos para dispositivos móveis (telefones) */
 @media (max-width: 480px) {
     /* Estilos para telas pequenas */
+    .small-icon{
+        font-size: 250%;
+    }
+    .container-photo {
+        display: block;
+        margin: 0 auto; /* Centraliza horizontalmente */
+        margin-top: 30vh; /* Ajuste conforme necessário */
+        width: 40%; /* Largura relativa para não ocupar toda a largura */
+        max-width: 100%; /* Garante que não ultrapasse a largura da tela */
+    }
+
+    .card-img-top {
+        border-bottom-left-radius: 5vw;
+        border-bottom-right-radius: 5vw;
+        height: 65vh; /* Altura desejada */
+        max-height: 65vh; /* Altura máxima desejada */
+       
+        object-fit: cover; /* Ajusta a imagem ao tamanho do container */
+    }
+
+    .containerText {
+        position: absolute;
+        font-family: var(--font-family);
+        font-weight: 1000;
+        font-size: 0.7rem;
+        font-style: normal;
+        text-align: center; /* Centraliza o texto */
+        top: 12vh; /* Posição relativa ao topo */
+        left: 50%; /* Centraliza horizontalmente */
+        transform: translateX(-50%); /* Ajusta para centralizar corretamente */
+        color: var(--color-text); /* Cor do texto */
+        width: 80%; /* Largura relativa para não ocupar toda a largura */
+        max-width: 600px; /* Largura máxima fixa */
+    }
+
+    .text-normal-apresentacao {
+        font-size: 1.5rem;
+    }
+    .photos-container{
+        display: none;
+    }
+    .card-img-top{
+        height: 63vh;
+    }
   }
   
   /* Estilos para dispositivos móveis (telefones grandes e tablets pequenos) */
