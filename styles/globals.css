@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
 :root {
     --color-link: #fff;
     --color-underline-link: #ff4400;
@@ -12,8 +13,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-body{
+}
+
+body {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -22,7 +24,6 @@ body{
 }
 
 header {
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -50,14 +51,14 @@ header::before {
 }
 
 a {
-    position:sticky;
+    position: sticky;
     font-family: var(--font-family);
-    position: relative; /* Necessário para o posicionamento absoluto do pseudo-elemento */
+    position: relative;
     display: inline-block;
     text-decoration: none;
     color: var(--color-link);
     font-size: 0.7em;
-    padding: 10px; /* Adicione padding para espaçamento interno */
+    padding: 10px;
 }
 
 a::before {
@@ -75,218 +76,184 @@ a:hover::before {
     width: 100%;
 }
  
-.section-container{
+.section-container {
     display: flex;
-    width: 100%;    
-}
-
-.GlobalDiv{
+    align-items: center;
+    justify-content: center;
     width: 100%;
 }
-.small-icon{
+
+.GlobalDiv {
+    width: 100%;
+}
+
+.small-icon {
     font-size: 30px;
 }
 
-.container-photo{
-    position: relative;
+.container-photo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
 }
 
 .image-container {
-    width: 15rem; /* Largura desejada */
-    height: 17rem; /* Altura desejada */
+    width: 15rem;
+    height: 17rem;
     overflow: hidden;
     position: relative;
-  }
-  .card{
-    margin: 20px;
-  }
-  .image-container img {
-    position: relative;
-    top: 50%;
-    left: 50%;
+}
+
+.image-container img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transform: translate(-50%, -50%);
-  }
-  
+}
 
-.card{
+.card {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     background-color: #000000c9;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.771);
     overflow: hidden;
+    margin-top: 20px;
 }
-.card-img-top{
+
+.card-body {
+    padding: 20px;
+}
+
+.card-img-top {
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
 }
 
-.containerText{
-    position: relative;
+.containerText {
     font-family: var(--font-family);
-    font-optical-sizing: auto;
     font-weight: 1000;
-    font-style: normal;
-    text-orientation: mixed; /* Orientação mista para garantir que o texto fique na posição correta */
-    white-space: nowrap; /* Evita que o texto quebre em várias linhas */
-    top: 15vh;
-    color: var(--color-text); /* Cor do texto */
+    color: var(--color-text);
+    text-align: center;
+    margin-top: 2vh;
 }
 
-.destaque-text{
+.destaque-text {
     color: var(--destaque-cor);
 }
-p{
+
+p {
     margin: 0;
 }
-.logos-container{
-    position: relative;
-    top: 17vh;
+
+.logos-container {
+    margin-top: 5vh;
 }
-.logos{
+
+.logos {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     flex-wrap: wrap;
-    gap: 10px; /* Espaçamento entre as imagens */
+    gap: 10px;
 }
-.image{
-    display: flex;
-}
-.text-normal-apresentacao{
+
+.text-normal-apresentacao {
     font-size: 2rem;
 }
 
 /* Estilos gerais para a barra de rolagem */
 ::-webkit-scrollbar {
-    width: 12px; /* Largura da barra de rolagem */
-  }
-  
-  /* Estilos para a parte de trás da barra de rolagem */
-  ::-webkit-scrollbar-track {
-    background: var(--color-underline-link); /* Cor do fundo da barra de rolagem */
-  }
-  
-  /* Estilos para o polegar da barra de rolagem */
-  ::-webkit-scrollbar-thumb {
-    background: var(--background-page); /* Cor do polegar da barra de rolagem */
-    border-radius: 10px; /* Bordas arredondadas */
-  }
-  
-  /* Estilos para o polegar da barra de rolagem quando estiver sendo pressionado */
-  ::-webkit-scrollbar-thumb:active {
-    background: var(--background-page); /* Cor do polegar da barra de rolagem ao ser pressionado */
-  }
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-underline-link);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--background-page);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: var(--background-page);
+}
+
 @media (max-width: 534px) {
-    .section-container{
-        align-items: center;
+    body{
+        align-items: baseline;
+    }
+
+    .section-container {
         flex-direction: column;
-        height: 100vh;
-        margin-top: 100px;
+        position: relative;
+        top: 10vh;
     }
     .logos-container{
-        top: 5vh;
+        position: relative;
+        bottom: 2vh;
     }
-    .GlobalDiv{
-        height: 50vh;
+    .GlobalDiv {
+        height: auto;
     }
-    .containerText{
-        text-align: center;
-        font-size: 0.6rem;
-        top: 2vh;
+    .containerText {
+        font-size: 0.7rem;
     }
-    .text-normal-apresentacao{
+    .text-normal-apresentacao {
+        font-size: 1.4rem;
+    }
+
+}
+
+@media (min-width: 535px) and (max-width: 644px) {
+    body{
+        align-items: baseline;
+    }
+
+    .section-container {
+        flex-direction: column;
+        position: relative;
+        top: 10vh;
+    }
+    .logos-container{
+        position: relative;
+        bottom: 2vh;
+    }
+    .GlobalDiv {
+        height: auto;
+    }
+    .containerText {
         font-size: 1rem;
     }
-    .logos{
-        display: flex;
-        justify-content: center;
+    .text-normal-apresentacao {
+        font-size: 1.4rem;
     }
-  
-    .container-photo{
-        width: 80vw;
-        height: 55vh;
-        display: flex;
-        justify-content: center;
-        position: relative;
-        bottom:10vh;
-    }
-}
-@media (min-width: 535px) and (max-width: 644px) {
-        /* Estilos para laptops pequenos */
-        .section-container{
-            align-items: center;
-            flex-direction: column;
-            height: 100vh;
-            margin-top: 100px;
-        }
-        .logos-container{
-            top: 5vh;
-        }
-        .GlobalDiv{
-            height: 50vh;
-        }
-        .containerText{
-            text-align: center;
-            top: 2vh;
-        }
-        .logos{
-            display: flex;
-            justify-content: center;
-        }
-      
-        .container-photo{
-            width: 80vw;
-            height: 55vh;
-            display: flex;
-            justify-content: center;
-            position: relative;
-            bottom:10vh;
-        }
+
 }
 
 @media (min-width: 645px) and (max-width: 930px) {
-    /* Estilos para laptops pequenos */
-    .section-container{
-        align-items: center;
+    body{
+        align-items: baseline;
+    }
+
+    .section-container {
         flex-direction: column;
-        height: 100vh;
-        margin-top: 100px;
+        position: relative;
+        top: 10vh;
     }
     .logos-container{
-        top: 5vh;
-    }
-    .GlobalDiv{
-        height: 50vh;
-    }
-    .containerText{
-        text-align: center;
-        top: 2vh;
-    }
-    .logos{
-        display: flex;
-        justify-content: center;
-    }
-  
-    .container-photo{
-        width: 80vw;
-        height: 55vh;
-        display: flex;
-        justify-content: center;
         position: relative;
-        bottom:10vh;
+        bottom: 2vh;
     }
+    .GlobalDiv {
+        height: auto;
+    }
+    .containerText {
+        font-size: 1rem;
+    }
+    .text-normal-apresentacao {
+        font-size: 1.4rem;
+    }
+
 }
-  
-  /* Laptops grandes e desktops (1201px a 1400px) */
-@media (min-width: 1201px) and (max-width: 1400px) {
-    /* Estilos para laptops grandes e desktops */
-}
-  
-  /* Desktops grandes (acima de 1400px) */
-@media (min-width: 1401px) {
-    /* Estilos para desktops grandes */
-}
-  
