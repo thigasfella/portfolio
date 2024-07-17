@@ -12,11 +12,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    scroll-behavior: smooth;
   }
 body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
     background-color: var(--background-page);
-    max-width: 100%;
 }
 
 header {
@@ -72,365 +74,219 @@ a::before {
 a:hover::before {
     width: 100%;
 }
+ 
+.section-container{
+    display: flex;
+    width: 100%;    
+}
+
+.GlobalDiv{
+    width: 100%;
+}
+.small-icon{
+    font-size: 30px;
+}
 
 .container-photo{
-    display: inline-block;
-    margin-left: 70%;
-    margin-top: 12vh;
-    
+    position: relative;
 }
-.card{
-    background-color: #000000c9;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.771);
+
+.image-container {
+    width: 15rem; /* Largura desejada */
+    height: 17rem; /* Altura desejada */
     overflow: hidden;
-    width: 100% !important;
-}
-.card-img-top{
-    border-bottom-left-radius: 5vw;
-    border-bottom-right-radius: 5vw;
-    height: 65vh;
-}
-.card-text{
-    height: 15%;
-    
-}
-.card-body{
+    position: relative;
+  }
+  .card{
+    margin: 20px;
+  }
+  .image-container img {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+  }
+  
+
+.card{
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #000000c9;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.771);
+    overflow: hidden;
+}
+.card-img-top{
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 .containerText{
-    position: absolute;
+    position: relative;
     font-family: var(--font-family);
     font-optical-sizing: auto;
     font-weight: 1000;
     font-style: normal;
     text-orientation: mixed; /* Orientação mista para garantir que o texto fique na posição correta */
     white-space: nowrap; /* Evita que o texto quebre em várias linhas */
-    top: 25vh; /* Alinha no topo */
-    left: 7.2rem;
+    top: 15vh;
     color: var(--color-text); /* Cor do texto */
 }
-.text-normal-apresentacao{
-    font-size: 2rem;
-}
+
 .destaque-text{
     color: var(--destaque-cor);
 }
 p{
     margin: 0;
 }
-i{
-    font-size: 3rem;
-    margin: 0 auto;
+.logos-container{
+    position: relative;
+    top: 17vh;
+}
+.logos{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 10px; /* Espaçamento entre as imagens */
+}
+.image{
+    display: flex;
+}
+.text-normal-apresentacao{
+    font-size: 2rem;
 }
 
-.photos-container{
-    width: 100%;
-    right: 6%;
-    text-align: center;
-    font-style: normal;
-    text-orientation: mixed; /* Orientação mista para garantir que o texto fique na posição correta */
-    white-space: nowrap; /* Evita que o texto quebre em várias linhas */
-    position: absolute; /* Posição absoluta para sobrepor */
-    top: 20vh; /* Alinha no topo */
-}
-.photos img{
-    width: 15%;
-    height: 10%;
-    margin: 0 auto;
-    padding: 10px;
-}
-
-@media (max-width: 350px){
-    .small-icon{
-        font-size: 250%;
+/* Estilos gerais para a barra de rolagem */
+::-webkit-scrollbar {
+    width: 12px; /* Largura da barra de rolagem */
+  }
+  
+  /* Estilos para a parte de trás da barra de rolagem */
+  ::-webkit-scrollbar-track {
+    background: var(--color-underline-link); /* Cor do fundo da barra de rolagem */
+  }
+  
+  /* Estilos para o polegar da barra de rolagem */
+  ::-webkit-scrollbar-thumb {
+    background: var(--background-page); /* Cor do polegar da barra de rolagem */
+    border-radius: 10px; /* Bordas arredondadas */
+  }
+  
+  /* Estilos para o polegar da barra de rolagem quando estiver sendo pressionado */
+  ::-webkit-scrollbar-thumb:active {
+    background: var(--background-page); /* Cor do polegar da barra de rolagem ao ser pressionado */
+  }
+@media (max-width: 534px) {
+    .section-container{
+        align-items: center;
+        flex-direction: column;
+        height: 100vh;
+        margin-top: 100px;
     }
-    .container-photo {
-        display: block;
-        margin: 0 auto; /* Centraliza horizontalmente */
-        margin-top: 25vh; /* Ajuste conforme necessário */
-        width: 70%; /* Largura relativa para não ocupar toda a largura */
-        max-width: 100%; /* Garante que não ultrapasse a largura da tela */
+    .logos-container{
+        top: 5vh;
     }
-
-    .card-img-top {
-        border-bottom-left-radius: 5vw;
-        border-bottom-right-radius: 5vw;
-        height: 10vh; /* Altura desejada */
-        max-height: 40vh; /* Altura máxima desejada */
-       
-        object-fit: cover; /* Ajusta a imagem ao tamanho do container */
+    .GlobalDiv{
+        height: 50vh;
     }
-
-    .containerText {
-        position: absolute;
-        font-family: var(--font-family);
-        font-weight: 1000;
-        font-size: 0.5rem;
-        font-style: normal;
-        text-align: center; /* Centraliza o texto */
-        top: 12vh; /* Posição relativa ao topo */
-        left: 50%; /* Centraliza horizontalmente */
-        transform: translateX(-50%); /* Ajusta para centralizar corretamente */
-        color: var(--color-text); /* Cor do texto */
-        width: 80%; /* Largura relativa para não ocupar toda a largura */
-        max-width: 600px; /* Largura máxima fixa */
-    }
-
-    .text-normal-apresentacao {
-        font-size: 0.9rem;
-    }
-    .photos-container{
-        width: 100%;
-        right: 10%;
+    .containerText{
         text-align: center;
-        font-style: normal;
-        text-orientation: mixed; /* Orientação mista para garantir que o texto fique na posição correta */
-        white-space: nowrap; /* Evita que o texto quebre em várias linhas */
-        position: relative; /* Posição absoluta para sobrepor */
-        top: 65vh; /* Alinha no topo */
-    }
-    .photos img{
-        width: 12%;
-        height: 10%;
-        margin: 0 auto;
-        padding: 3px;
-    }
-    .card-img-top{
-        height: 63vh;
-    }
-}
-/* Estilos para dispositivos móveis (telefones) */
-@media (min-width: 351px) and (max-width: 480px) {
-    /* Estilos para telas pequenas */
-    .small-icon{
-        font-size: 250%;
-    }
-    .container-photo {
-        display: block;
-        margin: 0 auto; /* Centraliza horizontalmente */
-        margin-top: 25vh; /* Ajuste conforme necessário */
-        width: 70%; /* Largura relativa para não ocupar toda a largura */
-        max-width: 100%; /* Garante que não ultrapasse a largura da tela */
-    }
-
-    .card-img-top {
-        border-bottom-left-radius: 5vw;
-        border-bottom-right-radius: 5vw;
-        height: 10vh; /* Altura desejada */
-        max-height: 42vh; /* Altura máxima desejada */
-       
-        object-fit: cover; /* Ajusta a imagem ao tamanho do container */
-    }
-
-    .containerText {
-        position: absolute;
-        font-family: var(--font-family);
-        font-weight: 1000;
         font-size: 0.6rem;
-        font-style: normal;
-        text-align: center; /* Centraliza o texto */
-        top: 12vh; /* Posição relativa ao topo */
-        left: 50%; /* Centraliza horizontalmente */
-        transform: translateX(-50%); /* Ajusta para centralizar corretamente */
-        color: var(--color-text); /* Cor do texto */
-        width: 80%; /* Largura relativa para não ocupar toda a largura */
-        max-width: 600px; /* Largura máxima fixa */
+        top: 2vh;
     }
-
-    .text-normal-apresentacao {
+    .text-normal-apresentacao{
         font-size: 1rem;
     }
-    .photos-container{
-        width: 100%;
-        right: 10%;
-        text-align: center;
-        font-style: normal;
-        text-orientation: mixed; /* Orientação mista para garantir que o texto fique na posição correta */
-        white-space: nowrap; /* Evita que o texto quebre em várias linhas */
-        position: relative; /* Posição absoluta para sobrepor */
-        top: 64vh; /* Alinha no topo */
+    .logos{
+        display: flex;
+        justify-content: center;
     }
-    .photos img{
-        width: 12%;
-        height: 10%;
-        margin: 0 auto;
-        padding: 5px;
-    }
-    .card-img-top{
-        height: 63vh;
-    }
-  }
   
-  /* Estilos para dispositivos móveis (telefones grandes e tablets pequenos) */
-  @media (min-width: 481px) and (max-width: 767px) {
-    /* Estilos para telas médias */
-    .small-icon{
-        font-size: 250%;
-    }
-    .container-photo {
-        display: block;
-        margin: 0 auto; /* Centraliza horizontalmente */
-        margin-top: 30vh; /* Ajuste conforme necessário */
-        width: 40%; /* Largura relativa para não ocupar toda a largura */
-        max-width: 100%; /* Garante que não ultrapasse a largura da tela */
-    }
-
-    .card-img-top {
-        border-bottom-left-radius: 5vw;
-        border-bottom-right-radius: 5vw;
-        height: 45vh; /* Altura desejada */
-        max-height: 45vh; /* Altura máxima desejada */
-       
-        object-fit: cover; /* Ajusta a imagem ao tamanho do container */
-    }
-
-    .containerText {
-        position: absolute;
-        font-family: var(--font-family);
-        font-weight: 1000;
-        font-size: 0.7rem;
-        font-style: normal;
-        text-align: center; /* Centraliza o texto */
-        top: 12vh; /* Posição relativa ao topo */
-        left: 50%; /* Centraliza horizontalmente */
-        transform: translateX(-50%); /* Ajusta para centralizar corretamente */
-        color: var(--color-text); /* Cor do texto */
-        width: 80%; /* Largura relativa para não ocupar toda a largura */
-        max-width: 600px; /* Largura máxima fixa */
-    }
-
-    .text-normal-apresentacao {
-        font-size: 1.5rem;
-    }
-    .photos-container{
-        width: 100%;
-        right: 5%;
-        text-align: center;
-        font-style: normal;
-        text-orientation: mixed; /* Orientação mista para garantir que o texto fique na posição correta */
-        white-space: nowrap; /* Evita que o texto quebre em várias linhas */
-        position: absolute; /* Posição absoluta para sobrepor */
-        top: 82vh; /* Alinha no topo */
-    }
-    .photos img{
-        width: 10%;
-        height: 10%;
-        margin: 0 auto;
-        padding: 10px;
-    }
-    .card-img-top{
-        height: 63vh;
-    }
-  }
-  
-  /* Estilos para tablets */
-  @media (min-width: 768px) and (max-width: 1024px) {
-    /* Estilos para tablets */
-    .small-icon{
-        font-size: 300%;
-    }
-    .containerText {
-        position: absolute;
-        font-family: var(--font-family);
-        font-weight: 1000;
-        font-size: 0.9rem;
-        font-style: normal;
-
-        top: 30vh; /* Posição relativa ao topo */
-        left: 45%; /* Centraliza horizontalmente */
-        transform: translateX(-50%); /* Ajusta para centralizar corretamente */
-        color: var(--color-text); /* Cor do texto */
-        width: 80%; /* Largura relativa para não ocupar toda a largura */
-        max-width: 600px; /* Largura máxima fixa */
-    }
-    
-    .photos-container{
-        width: 100%;
-        right: 16%;
-        text-align: center;
-        font-style: normal;
-        text-orientation: mixed; /* Orientação mista para garantir que o texto fique na posição correta */
-        white-space: nowrap; /* Evita que o texto quebre em várias linhas */
-        position: absolute; /* Posição absoluta para sobrepor */
-        top: 20vh; /* Alinha no topo */
-    }
-    .photos img{
-        width: 8%;
-        height: 10%;
-        margin: 0 auto;
-        padding: 10px;
-    }
     .container-photo{
-        display: inline-block;
-        margin-left: 65%;
-        margin-top: 12vh;
+        width: 80vw;
+        height: 55vh;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        bottom:10vh;
     }
-    .card-img-top{
-        height: 65vh;
-    }
-  }
-  
-  /* Estilos para desktops pequenos */
-  @media (min-width: 1025px) and (max-width: 1280px) {
-    /* Estilos para desktops pequenos */
-    .small-icon{
-        font-size: 300%;
-    }
-    .card-img-top{
-        height: 65vh;
-    }
-    .photos-container{
-        width: 100%;
-        right: 3%;
-        text-align: center;
-        font-style: normal;
-        text-orientation: mixed; /* Orientação mista para garantir que o texto fique na posição correta */
-        white-space: nowrap; /* Evita que o texto quebre em várias linhas */
-        position: absolute; /* Posição absoluta para sobrepor */
-        top: 22vh; /* Alinha no topo */
-    }
-    .photos img{
-        width: 12%;
-        height: 10%;
-        margin: 0 auto;
-        padding: 10px;
-    }
+}
+@media (min-width: 535px) and (max-width: 644px) {
+        /* Estilos para laptops pequenos */
+        .section-container{
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            margin-top: 100px;
+        }
+        .logos-container{
+            top: 5vh;
+        }
+        .GlobalDiv{
+            height: 50vh;
+        }
+        .containerText{
+            text-align: center;
+            top: 2vh;
+        }
+        .logos{
+            display: flex;
+            justify-content: center;
+        }
+      
+        .container-photo{
+            width: 80vw;
+            height: 55vh;
+            display: flex;
+            justify-content: center;
+            position: relative;
+            bottom:10vh;
+        }
+}
 
-  }
-  
-  /* Estilos para desktops médios */
-  @media (min-width: 1281px) and (max-width: 1440px) {
-    /* Estilos para desktops médios */
-    .small-icon{
-        font-size: 300%;
+@media (min-width: 645px) and (max-width: 930px) {
+    /* Estilos para laptops pequenos */
+    .section-container{
+        align-items: center;
+        flex-direction: column;
+        height: 100vh;
+        margin-top: 100px;
     }
-    .card-img-top{
-        height: 65vh;
+    .logos-container{
+        top: 5vh;
     }
-    .photos-container{
-        width: 100%;
-        right: 3%;
+    .GlobalDiv{
+        height: 50vh;
+    }
+    .containerText{
         text-align: center;
-        font-style: normal;
-        text-orientation: mixed; /* Orientação mista para garantir que o texto fique na posição correta */
-        white-space: nowrap; /* Evita que o texto quebre em várias linhas */
-        position: absolute; /* Posição absoluta para sobrepor */
-        top: 22vh; /* Alinha no topo */
+        top: 2vh;
     }
-    .photos img{
-        width: 12%;
-        height: 10%;
-        margin: 0 auto;
-        padding: 10px;
+    .logos{
+        display: flex;
+        justify-content: center;
     }
-
-  }
   
-  /* Estilos para desktops grandes */
-  @media (min-width: 1441px) {
+    .container-photo{
+        width: 80vw;
+        height: 55vh;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        bottom:10vh;
+    }
+}
+  
+  /* Laptops grandes e desktops (1201px a 1400px) */
+@media (min-width: 1201px) and (max-width: 1400px) {
+    /* Estilos para laptops grandes e desktops */
+}
+  
+  /* Desktops grandes (acima de 1400px) */
+@media (min-width: 1401px) {
     /* Estilos para desktops grandes */
-  }
+}
   
