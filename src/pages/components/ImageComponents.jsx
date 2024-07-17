@@ -1,13 +1,6 @@
 import Image from 'next/image';
-import { useEffect } from 'react';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-
 const ImageComponent = () => {
-  useEffect(() => {
-    AOS.init();
-    AOS.refresh(); // Atualiza o AOS para reconhecer os novos elementos
-  }, []);
+
 
   const data = [
     { src: "/img/logo-react.png", duration: 2000 },

@@ -155,7 +155,7 @@ p {
 
 .logos {
     display: flex;
-    justify-content: center;
+    justify-content:flex-start;
     flex-wrap: wrap;
     gap: 10px;
 }
@@ -185,6 +185,9 @@ p {
 @media (max-width: 534px) {
     body{
         align-items: baseline;
+    }
+    .logos{
+        justify-content: center;
     }
     .image{
         width: 25px;
@@ -230,6 +233,9 @@ p {
 @media (min-width: 535px) and (max-width: 930px) {
     body{
         align-items: baseline;
+    }
+    .logos{
+        justify-content: center;
     }
     .image{
         width: 25px;
