@@ -29,8 +29,6 @@ export default function Home() {
               <CardPhoto />
 
               <TextApresentation />
-
-              <ImageComponent/>
  
               <TextVertical/>
         </section>
