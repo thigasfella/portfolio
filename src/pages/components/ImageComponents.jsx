@@ -32,8 +32,8 @@ const ImageComponent = () => {
             data-aos-duration={image.duration}
             src={image.src}
             alt="Logo"
-            width={42}
-            height={38}
+            width={35}
+            height={32}
             className="image"
           />
         ))}

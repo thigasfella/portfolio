@@ -22,7 +22,7 @@ export default function Home() {
 
       <LinksHeader />
 
-      <main>
+      <main id="home">
 
       <section className="section-container">
           <div className="GlobalDiv">
