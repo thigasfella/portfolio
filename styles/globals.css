@@ -185,8 +185,8 @@ p {
         align-items: baseline;
     }
     .image{
-        width: 20px;
-        height: 18px;
+        width: 25px;
+        height: 24px;
     }
     .image-container{
          overflow: hidden;
@@ -211,7 +211,7 @@ p {
         height: auto;
     }
     .containerText {
-        font-size: 0.5rem;
+        font-size: 0.7rem;
     }
     .text-normal-apresentacao {
         font-size: 1.1rem;
@@ -228,8 +228,8 @@ p {
         align-items: baseline;
     }
     .image{
-        width: 20px;
-        height: 18px;
+        width: 25px;
+        height: 24px;
     }
     .image-container{
          overflow: hidden;
