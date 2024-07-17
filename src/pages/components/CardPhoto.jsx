@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function CardPhoto() {
   return (
-    <div className="container-photo" id="home" data-aos="fade-down" data-aos-duration="1000">
+    <div className="container-photo" data-aos="fade-down" data-aos-duration="1000">
       <div className="card">
         <div className="image-container">
           <img src="/img/my-photo.jpg" className="card-img-top" alt="Minha foto" />
