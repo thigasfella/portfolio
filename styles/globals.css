@@ -22,7 +22,10 @@ body {
     height: 100vh;
     background-color: var(--background-page);
 }
-
+main{
+    height: 100%;
+    display: flex;
+}
 header {
     display: flex;
     justify-content: center;
@@ -135,7 +138,6 @@ a:hover::before {
     font-family: var(--font-family);
     font-weight: 1000;
     color: var(--color-text);
-    text-align: center;
     margin-top: 2vh;
 }
 
@@ -219,7 +221,9 @@ p {
     .container-photo {
         padding: 0;
     }
-
+    .containerText {
+        text-align: center;
+    }
 }
 
 
@@ -261,5 +265,8 @@ p {
     }
     .container-photo {
         padding: 0;
+    }
+    .containerText {
+        text-align: center;
     }
 }
