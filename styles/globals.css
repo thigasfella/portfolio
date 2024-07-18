@@ -92,7 +92,7 @@ a:hover::before {
     justify-content: center;
     width: 100%;
     position: relative;
-    top: 25vh;
+    top: 50vh;
 }
 
 .GlobalDiv {
@@ -174,14 +174,14 @@ p {
 }
 
 .aboutMe-container{ 
-    width: 40vw;
+    width: 50vw;
     color: var(--color-text);
     overflow-y: auto;
     overflow-x: hidden;
 }
 .title-aboutMe{
     text-align: center;
-    font-family: "Dancing Script", cursive;
+    font-family: var(--font-family);
     font-optical-sizing: auto;
     font-weight: 800;
     font-style: normal;
@@ -193,6 +193,7 @@ p {
     position: relative;
     top: 5vh;
     font-family: var(--font-family);
+    font-weight: 500;
 }
 
 ::-webkit-scrollbar {
