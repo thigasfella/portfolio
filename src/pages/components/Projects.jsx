@@ -13,7 +13,7 @@ export default function Projects(){
         <div>
             {respositories.map(repository =>{
                 return(
-                    <div>
+                    <div className="card-projects" key={repository.id}>
                         {repository.name}
                     </div>
                 )

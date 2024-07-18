@@ -1,11 +1,12 @@
 import React from 'react';
+import Image from 'next/image';
 
 export default function CardPhoto() {
   return (
     <div className="container-photo" data-aos="fade-down" data-aos-duration="1000">
       <div className="card">
         <div className="image-container">
-          <img src="/img/my-photo.jpg" className="card-img-top" alt="Minha foto" />
+          <Image src="/img/my-photo.jpg" className="card-img-top" alt="Minha foto" width={1000} height={0}/>
         </div>
         <div className="card-body">
           <p className="card-text">
