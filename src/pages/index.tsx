@@ -7,7 +7,7 @@ import TextApresentation from "./components/TextApresentation";
 import CardPhoto from "./components/CardPhoto";
 import LinksHeader from "./components/LinksHeader";
 import AboutMe from "./components/AboutMe";
-
+// import Projects from "./components/Projects"
 
 export default function Home() {
   useEffect(() => {
@@ -38,6 +38,9 @@ export default function Home() {
       </section>
       <section className="section-container02" >
           <AboutMe />
+      </section>
+      <section className="section-container03">
+        {/* <Projects/> */}
       </section>
       </main>
       <script
