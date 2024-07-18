@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Playwrite+FR+Moderne:wght@100..400&display=swap');
 :root {
     --color-link: #fff;
     --color-underline-link: #ff4400;
@@ -22,9 +22,9 @@ body {
     height: 100vh;
     background-color: var(--background-page);
 }
+
 main{
     height: 100%;
-    display: flex;
 }
 header {
     display: flex;
@@ -79,11 +79,20 @@ a:hover::before {
     width: 100%;
 }
  
-.section-container {
+.section-container01 {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
+    position: relative;
+    top: 10vh;
+}
+.section-container02{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    top: 20vh;
 }
 
 .GlobalDiv {
@@ -164,6 +173,25 @@ p {
     font-size: 2rem;
 }
 
+.aboutMe-container{ 
+    width: 60vw;
+    color: var(--color-text);
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.title-aboutMe{
+    text-align: center;
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    letter-spacing: 1em;
+}
+.subtitle-aboutMe{
+    position: relative;
+    top: 5vh;
+    font-family: var(--font-family);
+}
 
 ::-webkit-scrollbar {
     width: 12px;
@@ -203,7 +231,7 @@ p {
     .small-icon{
         font-size: 20px;
     }
-    .section-container {
+    .section-container01 {
         flex-direction: column;
         position: relative;
         top: 10vh;
@@ -251,7 +279,7 @@ p {
         width: 200px;
         height: 300px;
     }
-    .section-container {
+    .section-container01 {
         flex-direction: column;
         position: relative;
         top: 10vh;

@@ -5,14 +5,19 @@ import "aos/dist/aos.css";
 import ImageComponent from './components/ImageComponents';
 import TextApresentation from "./components/TextApresentation";
 import CardPhoto from "./components/CardPhoto";
-import LinksHeader from "./components/LinksHeader"
+import LinksHeader from "./components/LinksHeader";
+import AboutMe from "./components/AboutMe";
+
 
 export default function Home() {
   useEffect(() => {
-    // Inicializa AOS apenas no cliente
-    AOS.init();
+    // Inicializa AOS apenas no cliente com um pequeno atraso
+    setTimeout(() => {
+      AOS.init();
+      AOS.refresh();
+    }, 100); // 100ms de atraso
   }, []);
-
+  
   return (
     <>
       <Head>
@@ -22,15 +27,18 @@ export default function Home() {
 
       <LinksHeader />
 
-      <main id="home">
+      <main>
 
-      <section className="section-container">
+      <section className="section-container01" id="home">
           <div className="GlobalDiv">
             <TextApresentation />
             <ImageComponent />
           </div>
             <CardPhoto />
-        </section>
+      </section>
+      <section className="section-container02" >
+          <AboutMe />
+      </section>
       </main>
       <script
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
