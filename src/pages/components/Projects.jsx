@@ -15,8 +15,6 @@ const languageLogos = {
     "Bootstrap": "https://raw.githubusercontent.com/github/explore/main/topics/bootstrap/bootstrap.png",
 };
 
-
-
 export default function Projects() {
     const [repositories, setRepositories] = useState([]);
     const [languages, setLanguages] = useState({});
@@ -46,35 +44,34 @@ export default function Projects() {
     return (
         <div className="card-projects-container">
             <div className="title-projects-container">
-            <div data-aos="zoom-out-up" data-aos-duration="700">
-                <h2 className="title-projects" id="projects">PROJETOS</h2>
-            </div>
-            {repositories.map(repository => {
-                if (!repository.private && repository.topics.includes('portfolio')) {
-                    return (
-                    <div data-aos="zoom-out-up" data-aos-duration="700">
-                        <div className="card-projects" key={repository.id}>
-                            <h3>{repository.name}</h3>
-                            <div className="description-container">
-                            <p className="description-project">{repository.description}</p>
-                            <div className="languages-container" >
-                                {languages[repository.id] && Object.keys(languages[repository.id]).map((lang, index) => (
-                                    <Image src={languageLogos[lang]} alt={lang} width={20} height={20} key={index} className="languages" />
-                                ))}
-                                <div className="links-project-container">
-                                <a href={repository.url} target="_blank" rel="noopener noreferrer" className="links-project"><i class="bi bi-box-arrow-up-right"></i></a>
-                                <a href={repository.html_url} target="_blank" rel="noopener noreferrer" className="links-project"><i class="bi bi-github"></i></a>
+                <div data-aos="zoom-out-up" data-aos-duration="700">
+                    <h2 className="title-projects" id="projects">PROJETOS</h2>
+                </div>
+                {repositories.map(repository => {
+                    if (!repository.private && repository.topics.includes('portfolio')) {
+                        return (
+                            <div data-aos="zoom-out-up" data-aos-duration="700" key={repository.id}>
+                                <div className="card-projects">
+                                    <h3>{repository.name}</h3>
+                                    <div className="description-container">
+                                        <p className="description-project">{repository.description}</p>
+                                        <div className="languages-container">
+                                            {languages[repository.id] && Object.keys(languages[repository.id]).map((lang, index) => (
+                                                <Image src={languageLogos[lang]} alt={lang} width={20} height={20} key={index} className="languages" />
+                                            ))}
+                                            <div className="links-project-container">
+                                                <a href={repository.url} target="_blank" rel="noopener noreferrer" className="links-project"><i className="bi bi-box-arrow-up-right"></i></a>
+                                                <a href={repository.html_url} target="_blank" rel="noopener noreferrer" className="links-project"><i className="bi bi-github"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>  
-                        </div>
-                        </div>
-                    </div>
-                    
-                    );
-                }
-                return null;
-            })}
+                            </div>
+                        );
+                    }
+                    return null;
+                })}
+            </div>
         </div>
-    </div>
     );
 }
