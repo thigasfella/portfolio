@@ -24,13 +24,23 @@ export default function Projects() {
             Authorization: `token ${process.env.NEXT_PUBLIC_GITHUB_TOKEN}`
         };
         fetch('https://api.github.com/users/thigasfella/repos', { headers })
-            .then(response => response.json())
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Failed to fetch repositories');
+                }
+                return response.json();
+            })
             .then(data => {
                 setRepositories(data);
                 // Fetch languages for each repository
                 data.forEach(repo => {
                     fetch(repo.languages_url, { headers })
-                        .then(response => response.json())
+                        .then(response => {
+                            if (!response.ok) {
+                                throw new Error('Failed to fetch languages');
+                            }
+                            return response.json();
+                        })
                         .then(languagesData => {
                             setLanguages(prevLanguages => ({
                                 ...prevLanguages,
@@ -38,7 +48,8 @@ export default function Projects() {
                             }));
                         });
                 });
-            });
+            })
+            .catch(error => console.error('Error fetching data:', error));
     }, []);
 
     return (
@@ -56,8 +67,8 @@ export default function Projects() {
                                     <div className="description-container">
                                         <p className="description-project">{repository.description}</p>
                                         <div className="languages-container">
-                                            {languages[repository.id] && Object.keys(languages[repository.id]).map((lang, index) => (
-                                                <Image src={languageLogos[lang]} alt={lang} width={20} height={20} key={index} className="languages" />
+                                            {languages[repository.id] && typeof languages[repository.id] === 'object' && Object.keys(languages[repository.id]).map((lang) => (
+                                                <Image src={languageLogos[lang]} alt={lang} width={20} height={20} key={lang} className="languages" />
                                             ))}
                                             <div className="links-project-container">
                                                 <a href={repository.url} target="_blank" rel="noopener noreferrer" className="links-project"><i className="bi bi-box-arrow-up-right"></i></a>
