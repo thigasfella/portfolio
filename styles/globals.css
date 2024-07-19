@@ -53,7 +53,7 @@ header::before {
     z-index: -1;
 }
 
-a {
+a, .nav-link {
     position: sticky;
     font-family: var(--font-family);
     position: relative;
@@ -63,7 +63,9 @@ a {
     font-size: 0.7em;
     padding: 10px;
 }
-
+.nav-link:hover{
+    color: var(--color-link);
+}
 a::before {
     content: '';
     position: absolute;
@@ -71,6 +73,7 @@ a::before {
     left: 0;
     width: 0;
     height: 1px;
+    color: var(--color-link);
     background-color: var(--color-underline-link);
     transition: width 0.3s ease-in-out;
 }
@@ -217,24 +220,59 @@ p {
     font-optical-sizing: auto;
     font-weight: 800;
     font-style: normal;
+    margin-bottom: 50px;
 }
 .card-projects{
     justify-content: space-between;
     display: flex;
     align-items: center;
     flex-direction: column;
-    width: 90vw;
-    height: 30vh;
+    width: 30vw;
+    height: 50vh;
     margin-bottom: 20px;
     overflow: hidden;
     border: 1px solid var(--color-text);
+    border-radius: 10px;
 }
 .languages-container{
     display: flex;
     align-items:baseline;
     justify-content:baseline;
 }
+.languages-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
 
+.languages {
+    margin-right: 5px;
+}
+.description-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    width: 100%;
+    background-color: #000000c9;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.771);
+    overflow: hidden;
+}
+.description-project{
+    margin-bottom: 10px;
+    color: var(--color-link);
+    font-family: var(--font-family);
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-size: 13px;
+    font-style: normal;
+
+}
+
+.links-project-container{
+    font-size: 25px;
+}
 ::-webkit-scrollbar {
     width: 12px;
 }
@@ -305,6 +343,13 @@ p {
         color: var(--color-text);
         overflow-y: auto;
         overflow-x: hidden;
+    }
+    .card-projects{
+        width: 80vw;
+        height: 50vh;
+    }
+    .section-container03{
+        top: 50vh;
     }
 }
 
