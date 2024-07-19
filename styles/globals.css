@@ -92,7 +92,15 @@ a:hover::before {
     justify-content: center;
     width: 100%;
     position: relative;
-    top: 50vh;
+    top: 30vh;
+}
+.section-container03{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    top: 60vh;
 }
 
 .GlobalDiv {
@@ -194,6 +202,37 @@ p {
     top: 5vh;
     font-family: var(--font-family);
     font-weight: 500;
+}
+.card-projects-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction:column;  
+    width: 50vw;
+}
+.title-projects{
+    
+    text-align: center;
+    font-family: var(--font-family);
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+}
+.card-projects{
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 30vw;
+    height: 30vh;
+    margin-bottom: 20px;
+    overflow: hidden;
+    border: 1px solid var(--color-text);
+}
+.languages-container{
+    display: flex;
+    align-items:baseline;
+    justify-content:baseline;
 }
 
 ::-webkit-scrollbar {

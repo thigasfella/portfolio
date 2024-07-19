@@ -7,7 +7,7 @@ import TextApresentation from "./components/TextApresentation";
 import CardPhoto from "./components/CardPhoto";
 import LinksHeader from "./components/LinksHeader";
 import AboutMe from "./components/AboutMe";
-// import Projects from "./components/Projects"
+import Projects from "./components/Projects"
 
 export default function Home() {
   useEffect(() => {
@@ -15,7 +15,7 @@ export default function Home() {
     setTimeout(() => {
       AOS.init();
       AOS.refresh();
-    }, 100); // 100ms de atraso
+    }, 200); // 100ms de atraso
   }, []);
   
   return (
@@ -40,7 +40,7 @@ export default function Home() {
           <AboutMe />
       </section>
       <section className="section-container03">
-        {/* <Projects/> */}
+        <Projects/>
       </section>
       </main>
       <script
