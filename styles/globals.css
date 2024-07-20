@@ -63,9 +63,11 @@ a, .nav-link {
     font-size: 0.7em;
     padding: 10px;
 }
-.nav-link:hover{
+
+a:hover, a:focus, a:active, a:visited, .nav-link:hover, .nav-link:focus, .nav-link:active, .nav-link:visited {
     color: var(--color-link);
 }
+
 a::before {
     content: '';
     position: absolute;
@@ -73,14 +75,14 @@ a::before {
     left: 0;
     width: 0;
     height: 1px;
-    color: var(--color-link);
     background-color: var(--color-underline-link);
     transition: width 0.3s ease-in-out;
 }
 
-a:hover::before {
+a:hover::before, a:focus::before, a:active::before, a:visited::before {
     width: 100%;
 }
+
  
 .section-container01 {
     display: flex;
@@ -206,15 +208,15 @@ p {
     font-family: var(--font-family);
     font-weight: 500;
 }
-.card-projects-container{
+.card-projects-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction:column;  
+    flex-direction: column;  
     width: 50vw;
 }
-.title-projects{
-    
+
+.title-projects {
     text-align: center;
     font-family: var(--font-family);
     font-optical-sizing: auto;
@@ -222,23 +224,71 @@ p {
     font-style: normal;
     margin-bottom: 50px;
 }
-.card-projects{
-    justify-content: space-between;
+
+.card-projects {
     display: flex;
-    align-items: center;
     flex-direction: column;
-    width: 30vw;
-    height: 50vh;
+    width: 50vw;
+    height: 70vh;
     margin-bottom: 20px;
     overflow: hidden;
     border: 1px solid var(--color-text);
     border-radius: 10px;
+    position: relative;
 }
-.languages-container{
+
+.card_project {
+    width: 100%;
+    height: 60%; /* Ajuste conforme necessário */
+    position: relative;
+    overflow: hidden;
+}
+
+.image_portfolio {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Faz com que a imagem cubra o container */
+}
+
+.title_repository {
+    position: absolute;
+    font-size: 20px;
+    font-family: var(--font-family);
+    font-weight: 700;
+    bottom: 10px; /* Ajuste conforme necessário para a posição do título */
+    left: 10px; /* Ajuste conforme necessário */
+    color: var(--color-link);
+    background-color: rgba(0, 0, 0, 0.5); /* Adiciona fundo semitransparente para legibilidade */
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.description-container {
     display: flex;
-    align-items:baseline;
-    justify-content:baseline;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 40%; /* Ajuste conforme necessário */
+    background-color: #000000c9;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.771);
+    position: absolute;
+    bottom: 0;
+    z-index: 1; /* Garante que a descrição esteja sobre a imagem */
+    padding: 10px; /* Adiciona algum padding para espaçamento interno */
 }
+
+.description-project {
+    margin-bottom: 2px;
+    color: var(--color-link);
+    font-family: var(--font-family);
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-size: 13px;
+    font-style: normal;
+}
+
 .languages-container {
     display: flex;
     align-items: center;
@@ -248,31 +298,11 @@ p {
 .languages {
     margin-right: 5px;
 }
-.description-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    flex-direction: column;
-    width: 100%;
-    background-color: #000000c9;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.771);
-    overflow: hidden;
-}
-.description-project{
-    margin-bottom: 10px;
-    color: var(--color-link);
-    font-family: var(--font-family);
-    font-optical-sizing: auto;
-    font-weight: 500;
-    font-size: 13px;
-    font-style: normal;
 
-}
-
-.links-project-container{
+.links-project-container {
     font-size: 25px;
 }
+
 ::-webkit-scrollbar {
     width: 12px;
 }
@@ -401,5 +431,9 @@ p {
     }
     .title-aboutMe{
         font-size: 20px;
+    }
+    .card-projects{
+        width: 80vw;
+        height: 70vh;
     }
 }
