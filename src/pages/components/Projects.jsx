@@ -81,7 +81,7 @@ export default function Projects() {
                                                 <Image src={languageLogos[lang]} alt={lang} width={20} height={20} key={lang} className="languages" />
                                             ))}
                                             <div className="links-project-container">
-                                                <a href={repository.url} target="_blank" rel="noopener noreferrer" className="links-project"><i className="bi bi-box-arrow-up-right"></i></a>
+                                                <a href={repository.homepage} target="_blank" rel="noopener noreferrer" className="links-project"><i className="bi bi-box-arrow-up-right"></i></a>
                                                 <a href={repository.html_url} target="_blank" rel="noopener noreferrer" className="links-project"><i className="bi bi-github"></i></a>
                                             </div>
                                         </div>
