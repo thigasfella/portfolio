@@ -35,9 +35,9 @@ export default function LinksHeader() {
     }, []);
 
     return (
-        <header>
+        <>
             <a href="#home" className="nav-link" data-target="home">
-                <Image src="/img/wired-outline-63-home.gif" width={25} height={25} alt="INICIO" className='icon_lopp'/>
+                <Image src="/img/wired-outline-63-home.gif" width={25} height={25} alt="INICIO" className='icon_lopp' priority/>
             </a>
             <a href="#aboutMe" className="nav-link" data-target="aboutMe">
                 <Image src="/img/wired-outline-268-avatar-man.gif" width={25} height={25} alt="SOBRE MIM" className='icon_lopp'/></a>
@@ -45,6 +45,6 @@ export default function LinksHeader() {
                 <Image src="/img/wired-outline-245-edit-document.gif" width={25} height={25} alt="PROJETOS" className='icon_lopp'/></a>
             <a href="#contact" className="nav-link" data-target="contact">
                 <Image src="/img/wired-outline-177-envelope-send.gif" width={25} height={25} alt="CONTATO" className='icon_lopp'/></a>
-        </header>
+        </>
     );
 }

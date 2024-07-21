@@ -66,10 +66,10 @@ export default function Projects() {
                                     <div className="card_project">
                                     <Image
                                         src={`/img/card_project_${repository.name}.png`}
-                                        layout="responsive"
-                                        width={350}
-                                        height={150}
+                                        fill="responsive"
+                                        alt="Logo do projeto"
                                         className="image_portfolio"
+                                        sizes="(max-width: 100%) 100%, (max-width: 100%) 100%"
                                         quality={100} // Ajusta a qualidade da imagem
                                     />
                                     <h3 className="title_repository">{repository.name.toUpperCase()}</h3>

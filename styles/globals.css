@@ -15,16 +15,18 @@
     box-sizing: border-box;
 }
 
+
 body {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    flex-direction: column; /* Organiza o conteúdo em uma coluna */
+    height: 100%;
     background-color: var(--background-page);
 }
 
-main{
-    height: 100vh;
+main {
+    flex: 1; /* Faz o main ocupar o espaço restante */
 }
 header {
     display: flex;
@@ -93,14 +95,14 @@ a:hover::before, a:focus::before, a:active::before, a:visited::before {
     justify-content: center;
     width: 100%;
     position: relative;
-    top: 10vh;
+    margin-top: 60px;
 }
 .section-container02{
     display: flex;
     justify-content: center;
     width: 100%;
     position: relative;
-    top: 30vh;
+    margin-top: 200px;
 }
 .section-container03{
     display: flex;
@@ -108,9 +110,15 @@ a:hover::before, a:focus::before, a:active::before, a:visited::before {
     justify-content: center;
     width: 100%;
     position: relative;
-    top: 60vh;
+    margin-top: 200px;
 }
-
+.foorter-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 200px;
+    width: 100%;
+}
 .GlobalDiv {
     width: 100%;
 }
@@ -161,7 +169,7 @@ a:hover::before, a:focus::before, a:active::before, a:visited::before {
 
 .containerText {
     font-family: var(--font-family);
-    font-weight: 1000;
+    font-weight: 800;
     color: var(--color-text);
     margin-top: 2vh;
 }
@@ -208,6 +216,7 @@ p {
     text-align: justify;
     position: relative;
     top: 5vh;
+    width: 96%;
     font-family: var(--font-family);
     font-weight: 500;
 }
@@ -216,17 +225,10 @@ p {
     align-items: center;
     justify-content: center;
     flex-direction: column;  
-    width: 50vw;
+    width: 100%;
+    height: auto;
 }
 
-.title-projects {
-    text-align: center;
-    font-family: var(--font-family);
-    font-optical-sizing: auto;
-    font-weight: 800;
-    font-style: normal;
-    margin-bottom: 50px;
-}
 
 .card-projects {
     display: flex;
@@ -254,12 +256,19 @@ p {
     height: 100% !important;
     object-fit: cover; /* Faz com que a imagem cubra o container */
 }
+.title-projects{
+    text-align: center;
+    font-family: var(--font-family);
+    color: var(--color-text);
+    font-weight: 800;
+    margin-bottom: 50px;
+}
 
 .title_repository {
     position: absolute;
     font-size: 20px;
     font-family: var(--font-family);
-    font-weight: 700;
+    font-weight: 800;
     bottom: 10px; /* Ajuste conforme necessário para a posição do título */
     left: 10px;
     color: var(--color-link);
@@ -308,9 +317,47 @@ p {
     font-size: 25px;
 }
 
-.icon_loop{
-    animation-name: icon_loop;
-    animation-iteration-count: 1;
+
+.card-footer-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 50vw;
+    
+}
+.title_contact-container{
+    margin-bottom: 40px;
+}
+.copy-container{
+    margin-top: 40px;
+}
+.title_contact{
+    font-family: var(--font-family);
+    color: var(--color-text);
+    font-weight: 800;
+}
+.card-footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-wrap: break-word; /* Força a quebra de linha dentro do container */
+    word-wrap: break-word; /* Força a quebra de linha dentro do container */
+    word-break: break-word; /* Força a quebra de linha dentro do container */
+    background-color: var(--color-underline-link);
+    background-color: #000000c9;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.771);
+    border: 1px solid black;
+    border-radius: 20px;
+}
+.icon_contact{ 
+    font-size: 50px;
+}
+.textCopy{
+    font-family: var(--font-family);
+    color: var(--color-text);
+    font-weight: 400;
 }
 
 ::-webkit-scrollbar {
@@ -331,8 +378,14 @@ p {
 }
 
 @media (max-width: 534px) {
-    body{
-        align-items: baseline;
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column; /* Organiza o conteúdo em uma coluna */
+        width: 100%;
+        height: 100%;
+        background-color: var(--background-page);
     }
     header {
         top: 5px;
@@ -358,7 +411,6 @@ p {
     .section-container01 {
         flex-direction: column;
         position: relative;
-        top: 10vh;
     }
     .logos-container{
         position: relative;
@@ -392,15 +444,29 @@ p {
         width: 80vw;
         height: 50vh;
     }
-    .section-container03{
-        top: 50vh;
+    .card-footer-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        
     }
+    .icon_contact{ 
+        font-size: 30px;
+    }
+
 }
 
 
 @media (min-width: 535px) and (max-width: 930px) {
-    body{
-        align-items: baseline;
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column; /* Organiza o conteúdo em uma coluna */
+        height: 100%;
+        background-color: var(--background-page);
     }
     header {
         top: 10px;
@@ -426,7 +492,6 @@ p {
     .section-container01 {
         flex-direction: column;
         position: relative;
-        top: 10vh;
     }
     .logos-container{
         position: relative;
@@ -454,4 +519,17 @@ p {
         width: 80vw;
         height: 50vh;
     }
+    .card-footer-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 50vw;
+        
+    }
+    .icon_contact{ 
+        font-size: 30px;
+    }
+
+
 }
