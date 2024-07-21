@@ -46,7 +46,7 @@ export default function Home() {
         <Projects/>
       </section>
       </main>
-      <footer className="foorter-container">
+      <footer  data-aos="fade-right" data-aos-duration="900">
         <Contact />
       </footer>
       <script

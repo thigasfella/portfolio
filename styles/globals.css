@@ -15,14 +15,13 @@
     box-sizing: border-box;
 }
 
-
 body {
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex-direction: column; /* Organiza o conteúdo em uma coluna */
-    height: 100%;
+    flex-direction: column;
+    min-height: 100vh;
     background-color: var(--background-page);
+    margin: 0;
 }
 
 main {
@@ -112,13 +111,7 @@ a:hover::before, a:focus::before, a:active::before, a:visited::before {
     position: relative;
     margin-top: 200px;
 }
-.foorter-container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 200px;
-    width: 100%;
-}
+
 .GlobalDiv {
     width: 100%;
 }
@@ -225,7 +218,6 @@ p {
     align-items: center;
     justify-content: center;
     flex-direction: column;  
-    width: 100%;
     height: auto;
 }
 
@@ -316,45 +308,59 @@ p {
 .links-project-container {
     font-size: 25px;
 }
+.title_contact-container {
+    margin-bottom: 40px;
+}
 
+.copy-container {
+    margin-top: 40px;
+}
+
+.title_contact {
+    font-family: var(--font-family);
+    color: var(--color-text);
+    font-weight: 800;
+}
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%; /* Ajuste para 100% para ocupar toda a largura disponível */
+    position: relative;
+    margin-top: 200px;
+    margin-bottom: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.771);
+    border-radius: 5px;
+}
 
 .card-footer-container {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    width: 50vw;
-    
+    width: 100%; /* Ajuste para 100% para ocupar toda a largura disponível */
+    max-width: 1200px; /* Adicione um max-width para limitar a largura em telas maiores */
+    margin: 0 auto; /* Centraliza horizontalmente */
 }
-.title_contact-container{
-    margin-bottom: 40px;
-}
-.copy-container{
-    margin-top: 40px;
-}
-.title_contact{
-    font-family: var(--font-family);
-    color: var(--color-text);
-    font-weight: 800;
-}
+
 .card-footer {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow-wrap: break-word; /* Força a quebra de linha dentro do container */
-    word-wrap: break-word; /* Força a quebra de linha dentro do container */
-    word-break: break-word; /* Força a quebra de linha dentro do container */
-    background-color: var(--color-underline-link);
     background-color: #000000c9;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.771);
     border: 1px solid black;
-    border-radius: 20px;
+    border-radius: 5px;
+    padding: 10px;
 }
-.icon_contact{ 
-    font-size: 50px;
+
+.icon_contact { 
+    font-size: 20px;
 }
-.textCopy{
+
+.textCopy {
     font-family: var(--font-family);
     color: var(--color-text);
     font-weight: 400;
@@ -440,21 +446,26 @@ p {
         overflow-y: auto;
         overflow-x: hidden;
     }
-    .card-projects{
-        width: 80vw;
-        height: 50vh;
+    footer {
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.771);
+        border: none;
     }
-    .card-footer-container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
+    .card-footer {
         width: 100%;
-        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #000000c9;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.771);
+        border: 1px solid black;
+        border-radius: 5px;
+        padding: 10px;
     }
-    .icon_contact{ 
-        font-size: 30px;
+    
+    .icon_contact { 
+        font-size: 20px;
     }
+    
 
 }
 
@@ -519,17 +530,24 @@ p {
         width: 80vw;
         height: 50vh;
     }
-    .card-footer-container {
+    footer {
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.771);
+        border: none;
+    }
+    .card-footer {
+        width: 100%;
         display: flex;
-        align-items: center;
         justify-content: center;
-        flex-direction: column;
-        width: 50vw;
-        
+        align-items: center;
+        background-color: #000000c9;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.771);
+        border: 1px solid black;
+        border-radius: 5px;
+        padding: 10px;
     }
-    .icon_contact{ 
-        font-size: 30px;
+    
+    .icon_contact { 
+        font-size: 20px;
     }
-
 
 }
