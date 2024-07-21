@@ -408,8 +408,8 @@ footer {
          overflow: hidden;
     }
     .card, .image-container{
-        width: 200px;
-        height: 380px;
+        width: 250px;
+        height: 400px;
     }
     .small-icon{
         font-size: 20px;
@@ -501,8 +501,8 @@ footer {
         font-size: 20px;
     }
     .card, .image-container{
-        width: 200px;
-        height: 300px;
+        width: 250px;
+        height: 400px;
     }
     .section-container01 {
         flex-direction: column;
