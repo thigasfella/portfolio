@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Image from 'next/image';
+import Tooltip from '@mui/material/Tooltip';
 
 const languageLogos = {
     "JavaScript": "https://raw.githubusercontent.com/github/explore/main/topics/javascript/javascript.png",
@@ -78,11 +79,17 @@ export default function Projects() {
                                         <p className="description-project">{repository.description}</p>
                                         <div className="languages-container">
                                             {languages[repository.id] && typeof languages[repository.id] === 'object' && Object.keys(languages[repository.id]).map((lang) => (
+                                                <Tooltip title={lang}>
                                                 <Image src={languageLogos[lang]} alt={lang} width={20} height={20} key={lang} className="languages" />
+                                                </Tooltip>
                                             ))}
                                             <div className="links-project-container">
+                                                <Tooltip title="Deploy do projeto">
                                                 <a href={repository.homepage} target="_blank" rel="noopener noreferrer" className="links-project"><i className="bi bi-box-arrow-up-right"></i></a>
+                                                </Tooltip>
+                                                <Tooltip title="Código do projeto">
                                                 <a href={repository.html_url} target="_blank" rel="noopener noreferrer" className="links-project"><i className="bi bi-github"></i></a>
+                                                </Tooltip>
                                             </div>
                                         </div>
                                     </div>

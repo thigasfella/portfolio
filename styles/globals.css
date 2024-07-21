@@ -444,6 +444,9 @@ footer {
     .title-aboutMe{
         font-size: 15px;
     }
+    .subtitle-aboutMe{
+        font-size: 10px;
+    }
     .aboutMe-container{ 
         width: 70vw;
         color: var(--color-text);
@@ -529,6 +532,9 @@ footer {
     }
     .title-aboutMe{
         font-size: 20px;
+    }
+    .subtitle-aboutMe{
+        font-size: 12px;
     }
     .card-projects{
         width: 80vw;
