@@ -425,6 +425,10 @@ footer {
     .GlobalDiv {
         height: auto;
     }
+    .card-projects{
+        width: 80vw;
+        height: 50vh;
+    }
     .containerText {
         font-size: 0.7rem;
     }
