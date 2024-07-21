@@ -79,7 +79,7 @@ export default function Projects() {
                                         <p className="description-project">{repository.description}</p>
                                         <div className="languages-container">
                                             {languages[repository.id] && typeof languages[repository.id] === 'object' && Object.keys(languages[repository.id]).map((lang) => (
-                                                <Tooltip title={lang}>
+                                                <Tooltip title={lang} key={lang}>
                                                 <Image src={languageLogos[lang]} alt={lang} width={20} height={20} key={lang} className="languages" />
                                                 </Tooltip>
                                             ))}
