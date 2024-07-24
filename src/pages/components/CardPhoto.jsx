@@ -6,7 +6,7 @@ export default function CardPhoto() {
     <div className="container-photo" data-aos="fade-down" data-aos-duration="1000">
       <div className="card">
         <div className="image-container">
-          <Image src="/img/my-photo.jpg" className="card-img-top" alt="Minha foto" width={1000} height={0}/>
+          <Image src="/img/my-photo.jpg" className="card-img-top" alt="Minha foto" priority width={1000} height={0}/>
         </div>
         <div className="card-body">
           <p className="card-text">

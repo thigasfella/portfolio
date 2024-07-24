@@ -39,21 +39,26 @@ export default function LinksHeader() {
         <>
             <Tooltip title="INÍCIO">
             <a href="#home" className="nav-link" data-target="home">
-                <Image src="/img/wired-outline-63-home.gif" width={25} height={25} alt="INICIO" className='icon_lopp' priority/>
+                <Image src="/img/wired-outline-63-home.gif" width={25} height={25} alt="INICIO" unoptimized className='icon_lopp' priority/>
             </a>
             </Tooltip>
             <Tooltip title="SOBRE MIM">
             <a href="#aboutMe" className="nav-link" data-target="aboutMe">
-                <Image src="/img/wired-outline-268-avatar-man.gif" width={25} height={25} alt="SOBRE MIM" className='icon_lopp'/></a>
+                <Image src="/img/wired-outline-268-avatar-man.gif" width={25} height={25} alt="SOBRE MIM" unoptimized className='icon_lopp'/></a>
             </Tooltip>
             <Tooltip title="PROJETOS">
             <a href="#projects" className="nav-link" data-target="projects">
-                <Image src="/img/wired-outline-245-edit-document.gif" width={25} height={25} alt="PROJETOS" className='icon_lopp'/></a>
+                <Image src="/img/wired-outline-187-suitcase.gif" width={25} height={25} alt="CONTATO" unoptimized className='icon_lopp'/></a>
             </Tooltip>
                 <Tooltip title="CONTATO">
             <a href="#contact" className="nav-link" data-target="contact">
-                <Image src="/img/wired-outline-177-envelope-send.gif" width={25} height={25} alt="CONTATO" className='icon_lopp'/></a>
+                <Image src="/img/wired-outline-1505-radio-walkie-talkie.gif" width={25} height={25} unoptimized alt="CONTATO" className='icon_lopp'/></a>
                 </Tooltip>
+                <Tooltip title="Baixar Currículo">
+                <a href="/Currículo%20Desenvolvedor%20Web.pdf" download>
+                    <Image src="/img/wired-outline-245-edit-document.gif" width={25} height={25} unoptimized alt="CURRÍCULO" className='icon_lopp'/>
+                </a>
+            </Tooltip>
         </>
     );
 }

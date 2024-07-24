@@ -101,7 +101,7 @@ a:hover::before, a:focus::before, a:active::before, a:visited::before {
     justify-content: center;
     width: 100%;
     position: relative;
-    margin-top: 200px;
+    margin-top: 150px;
 }
 .section-container03{
     display: flex;
@@ -109,7 +109,7 @@ a:hover::before, a:focus::before, a:active::before, a:visited::before {
     justify-content: center;
     width: 100%;
     position: relative;
-    margin-top: 200px;
+    margin-top: 150px;
 }
 
 .GlobalDiv {
@@ -193,8 +193,6 @@ p {
 .aboutMe-container{ 
     width: 50vw;
     color: var(--color-text);
-    overflow-y: auto;
-    overflow-x: hidden;
 }
 .title-aboutMe{
     text-align: center;
@@ -395,7 +393,7 @@ footer {
     }
     header {
         top: 5px;
-        width: 70%;
+        width: 85%;
     }
     .logos{
         justify-content: center;
@@ -450,8 +448,6 @@ footer {
     .aboutMe-container{ 
         width: 70vw;
         color: var(--color-text);
-        overflow-y: auto;
-        overflow-x: hidden;
     }
     footer {
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.771);

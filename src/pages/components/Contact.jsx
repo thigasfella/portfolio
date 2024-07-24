@@ -1,5 +1,6 @@
 export default function Contact(){
     return(
+        <>
         <div className="card-footer-container" id="contact">
             <div className="title_contact-container" >
             <h2 className="title_contact">CONTATO</h2>
@@ -13,5 +14,6 @@ export default function Contact(){
             <p className="textCopy">&copy;Thiago Lopes - 2024</p>
             </div>
         </div>
+        </>
     )
 }
