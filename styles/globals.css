@@ -101,7 +101,7 @@ a:hover::before, a:focus::before, a:active::before, a:visited::before {
     justify-content: center;
     width: 100%;
     position: relative;
-    margin-top: 150px;
+    margin-top: 170px;
 }
 .section-container03{
     display: flex;
@@ -325,7 +325,7 @@ footer {
     justify-content: center;
     width: 100%; /* Ajuste para 100% para ocupar toda a largura disponível */
     position: relative;
-    margin-top: 200px;
+    margin-top: 150px;
     margin-bottom: 20px;
     padding: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.771);
@@ -439,11 +439,9 @@ footer {
     .containerText {
         text-align: center;
     }
-    .title-aboutMe{
-        font-size: 15px;
-    }
+
     .subtitle-aboutMe{
-        font-size: 10px;
+        font-size: 13px;
     }
     .aboutMe-container{ 
         width: 70vw;
@@ -525,9 +523,6 @@ footer {
     }
     .containerText {
         text-align: center;
-    }
-    .title-aboutMe{
-        font-size: 20px;
     }
     .subtitle-aboutMe{
         font-size: 12px;
