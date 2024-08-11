@@ -13,11 +13,10 @@ import ParticlesBackground from './components/ParticlesBackground';
 
 export default function Home() {
   useEffect(() => {
-    // Inicializa AOS apenas no cliente com um pequeno atraso
     setTimeout(() => {
       AOS.init();
       AOS.refresh();
-    }, 200); // 100ms de atraso
+    }, 200);
   }, []);
   
   return (
@@ -30,7 +29,6 @@ export default function Home() {
       <header>
         <LinksHeader />
       </header>
-
       <main>
       <section className="section-container01" id="home">
           <div className="GlobalDiv">

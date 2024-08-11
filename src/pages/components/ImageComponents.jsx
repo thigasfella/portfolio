@@ -9,12 +9,14 @@ const ImageComponent = () => {
     { src: "/img/logo-js.png", duration: 2100 },
     { src: "/img/logo-typescript.png", duration: 2200 },
     { src: "/img/logo-node.png", duration: 2300 },
-    { src: "/img/logo-css.png", duration: 2400 },
-    { src: "/img/logo-html5.png", duration: 2500 },
-    { src: "/img/mongodb-logo.png", duration: 2600 },
-    { src: "/img/logo-nextjs.png", duration: 2700 },
-    { src: "/img/logo-sass.png", duration: 2800 },
-    { src: "/img/logo-bootstrap.png", duration: 2900 },
+    { src: "/img/nestjs.png", duration: 2400 },
+    { src: "/img/logo-css.png", duration: 2500 },
+    { src: "/img/logo-html5.png", duration: 2600 },
+    { src: "/img/postgresql.png", duration: 2700 },
+    { src: "/img/mysql.png", duration: 2800 },
+    { src: "/img/logo-nextjs.png", duration: 2900 },
+    { src: "/img/logo-sass.png", duration: 3000 },
+    { src: "/img/logo-bootstrap.png", duration: 3000 }
   ];
 
   return (
